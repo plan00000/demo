@@ -47,11 +47,17 @@
 			<artifactId>pagehelper</artifactId>
 			<version>5.1.10</version>
 		</dependency>
-		<!--连接池-->
+		<!--数据库连接池-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.1</version>
+		</dependency>
+		<!--引入oracle数据库jdbc驱动包-->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.1.0.7.0</version>
 		</dependency>
 	</dependencies>
 

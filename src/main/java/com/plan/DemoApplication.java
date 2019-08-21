@@ -10,9 +10,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.PropertySource;
 
 @EnableAutoConfiguration
-@PropertySource(value = "classpath:application-dev.properties",encoding = "utf-8")
+@PropertySource(value = "classpath:application.properties",encoding = "utf-8")
 @SpringBootApplication
-@MapperScan(basePackages = "com.plan.work.dao")
 public class DemoApplication extends SpringBootServletInitializer{
 
 	@Override

@@ -13,9 +13,8 @@ public class WorkService {
     private TbPrinttemplateMapper tbPrinttemplateMapper;
 
     public String work(){
-        TbPrinttemplate tbPrinttemplate = new TbPrinttemplate();
-        List<TbPrinttemplate> tbPrinttemplateList =tbPrinttemplateMapper.selectByEntitySelective(tbPrinttemplate);
-        return  tbPrinttemplateList.toString();
+        TbPrinttemplate tbPrinttemplate = tbPrinttemplateMapper.selectByPrimaryKey("871AFE078A25D6A7E050050A7D1279D3");
+        return tbPrinttemplate.toString();
     }
 
 }

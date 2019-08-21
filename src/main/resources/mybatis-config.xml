@@ -54,7 +54,7 @@
             <property name="autoRuntimeDialect" value="true"/>
         </plugin>
         <!--批量更新插件-->
-        <plugin interceptor="cn.com.pansky.mybatis.BatchInterceptor"/>
+        <!--<plugin interceptor="cn.com.pansky.mybatis.BatchInterceptor"/>-->
     </plugins>
 
 </configuration>

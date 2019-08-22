@@ -6,10 +6,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 以注解的方式 进行多数据源配置
+ * @Author: linzhihua
+ * @Description: 数据源注解
+ * @Date: Created in 2019/8/22 8:57
+ * @Modified By:
  */
 @Configuration
 public class MapperScannerConfig {
+    /**
+     * 主数据源注解
+     * @return
+     */
     @Bean
     public MapperScannerConfigurer primaryMapperScannerConfigurer(){
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();

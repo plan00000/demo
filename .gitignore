@@ -20,6 +20,8 @@ target/
 *.iml
 *.ipr
 *.class
+*.lck
+*.log
 test/
 
 

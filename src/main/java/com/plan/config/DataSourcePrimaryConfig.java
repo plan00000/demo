@@ -39,14 +39,14 @@ public class DataSourcePrimaryConfig {
     private Environment env;
 
     @Bean(name="primaryDataSource")
-    @ConfigurationProperties(prefix="spring.datasource.primary")
+    @ConfigurationProperties(prefix="spring.datasource.druid")
     public DataSource primaryDataSource(){
         AtomikosDataSourceBean ds = new AtomikosDataSourceBean();
-        Properties prop = build(env, "spring.datasource.druid");
+        Properties prop = build(env, "spring.datasource.druid.");
         ds.setXaDataSourceClassName(dataSourceType);
         ds.setPoolSize(5);
         ds.setXaProperties(prop);
-        return DataSourceBuilder.create().build();
+        return ds;
     }
 
     @Bean(name="primarySqlSessionFactory")
@@ -77,7 +77,7 @@ public class DataSourcePrimaryConfig {
     private Properties build(Environment env, String prefix) {
         Properties prop = new Properties();
         prop.put("name", env.getProperty(prefix + "primary.name"));
-        prop.put("url", env.getProperty(prefix + "primary.url"));
+        prop.put("url", env.getProperty(prefix + "primary.jdbcUrl"));
         prop.put("username", env.getProperty(prefix + "primary.username"));
         prop.put("password", env.getProperty(prefix + "primary.password"));
         prop.put("driverClassName", env.getProperty(prefix + "primary.driverClassName", ""));

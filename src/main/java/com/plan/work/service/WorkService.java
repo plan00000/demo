@@ -12,9 +12,9 @@ public class WorkService {
     @Autowired
     private TbPrinttemplateMapper tbPrinttemplateMapper;
 
-    public String work(){
+    public TbPrinttemplate work(){
         TbPrinttemplate tbPrinttemplate = tbPrinttemplateMapper.selectByPrimaryKey("871AFE078A25D6A7E050050A7D1279D3");
-        return tbPrinttemplate.toString();
+        return tbPrinttemplate;
     }
 
 }

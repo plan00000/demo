@@ -35,7 +35,7 @@ public class TransactionManagerConfig {
      * 声明式事务配置_开始
      * @return
      */
-    @Bean(name="transactionInterceptor")
+    @Bean(name="transactionInterceptor1")
     public TransactionInterceptor transactionInterceptor(){
         TransactionInterceptor transactionInterceptor = new TransactionInterceptor();
         transactionInterceptor.setTransactionManagerBeanName("transactionManager");
@@ -57,7 +57,7 @@ public class TransactionManagerConfig {
         annotationAutoProxyCreator.setBasePackages("com.plan");
         annotationAutoProxyCreator.setProxyTargetClass(true);
         annotationAutoProxyCreator.setAnnotationClasses("org.springframework.stereotype.Service");
-        annotationAutoProxyCreator.setInterceptorNames("transactionInterceptor");
+        annotationAutoProxyCreator.setInterceptorNames("transactionInterceptor1");
         return annotationAutoProxyCreator;
     }
 

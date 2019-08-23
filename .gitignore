@@ -23,6 +23,7 @@ target/
 *.lck
 *.log
 test/
+out/
 
 
 ### NetBeans ###

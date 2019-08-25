@@ -1,7 +1,7 @@
 package com.plan.work.entity;
 
 
-import com.plan.util.Remark;
+import com.plan.entity.Remark;
 
 public class TbPrinttemplate {
     /**

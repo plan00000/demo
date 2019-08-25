@@ -1,4 +1,4 @@
-package com.plan.util;
+package com.plan.entity;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -20,7 +20,7 @@ import java.util.Properties;
 
 /**
  * @Author: linzhihua
- * @Description: 主数据配置
+ * @Description: 主数据源配置
  * @Date: Created in 2019/8/22 8:57
  * @Modified By:
  */

@@ -16,8 +16,8 @@ import java.util.Locale;
 /**
  * 类型转换辅助工具类<br>
  *
- * @author wxy
- * @since 2009-07-06
+ * @author linzhihua
+ * @since 2019-07-06
  */
 public class TypeCaseUtil {
 

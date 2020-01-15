@@ -6,7 +6,7 @@ import com.plan.util.ThrowableUtil;
 
 /**
  * 返回帮助类
- * Created by lzh on 2017/4/20 0020.
+ * Created by linzhihua on 2017/4/20 0020.
  */
 public class ResultHelper {
 

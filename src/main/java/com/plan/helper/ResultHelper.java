@@ -56,10 +56,33 @@ public class ResultHelper {
         result.setMessage(message);
         return result;
     }
+    public static Result error(String message, String exceptionId){
+        Result result = new Result();
+        result.setCode(Result.Status.ERROR);
+        result.setMessage(message);
+        result.setExceptionId(exceptionId);
+        return result;
+    }
     public static Result error(String message, String exceptionId, Throwable throwable){
         Result result = new Result();
         result.setCode(Result.Status.ERROR);
         result.setMessage(message);
+        result.setExceptionId(exceptionId);
+        result.setException(ThrowableUtil.getCause(throwable));
+        return result;
+    }
+
+    /**
+     * 上传文件过大，异常错误说明
+     * @param message
+     * @param exceptionId
+     * @param throwable
+     * @return
+     */
+    public static Result maxUploadSizeError(String message,String exceptionId,Throwable throwable){
+        Result result = new Result();
+        result.setCode(Result.Status.ERROR);
+        result.setMessage("上传文件过大，系统只支持最大为10M的文件");
         result.setExceptionId(exceptionId);
         result.setException(ThrowableUtil.getCause(throwable));
         return result;

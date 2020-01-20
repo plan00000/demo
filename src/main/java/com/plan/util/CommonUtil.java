@@ -209,4 +209,16 @@ public class CommonUtil {
         return rs.toString();
     }
 
+    /**
+     * 是否基本数据类型或者基本数据类型的包装类
+     */
+    public static boolean isPrimitiveOrPrimitiveWrapper(Class<?> objectClass) {
+        return objectClass.isPrimitive() ||
+                (objectClass.isAssignableFrom(Byte.class) || objectClass.isAssignableFrom(Short.class) ||
+                        objectClass.isAssignableFrom(Integer.class) || objectClass.isAssignableFrom(Long.class) ||
+                        objectClass.isAssignableFrom(Double.class) || objectClass.isAssignableFrom(Float.class) ||
+                        objectClass.isAssignableFrom(Character.class) || objectClass.isAssignableFrom(Boolean.class)) ||
+                objectClass.isAssignableFrom(String.class) || objectClass.isAssignableFrom(BigDecimal.class);
+    }
+
 }

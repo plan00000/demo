@@ -39,11 +39,11 @@
     <!--</typeAliases>-->
 
     <plugins>
-        <!--<plugin interceptor="cn.com.pansky.mybatis.QueryLimitPlugin">-->
-        <!--&lt;!&ndash; 结果集大于10000会抛出异常&ndash;&gt;-->
-        <!--<property name="defaultLimitSize" value="10000"/>-->
-        <!--</plugin>-->
-        <!--<plugin interceptor="cn.com.pansky.mybatis.SqlCostInterceptor"/>-->
+        <!--<plugin interceptor="cn.com.pansky.mybatis.QueryLimitPlugin">
+        &lt;!&ndash; 结果集大于10000会抛出异常&ndash;&gt;
+        <property name="defaultLimitSize" value="10000"/>
+        </plugin>-->
+        <plugin interceptor="com.plan.mybatis.SqlCostInterceptor"/>
 
         <plugin interceptor="com.github.pagehelper.PageInterceptor">
             <!-- 这里的几个配置主要演示如何使用，如果不理解，一定要去掉下面的配置 -->

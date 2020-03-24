@@ -1,6 +1,6 @@
 package com.plan.config;
 
-import com.plan.mybatis.MyBatisWjqDao;
+import com.plan.mybatis.MyBatisPrimaryDao;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class MapperScannerConfig {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setBasePackage("com.plan");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("primarySqlSessionFactory");
-        mapperScannerConfigurer.setAnnotationClass(MyBatisWjqDao.class);
+        mapperScannerConfigurer.setAnnotationClass(MyBatisPrimaryDao.class);
         return mapperScannerConfigurer;
     }
 

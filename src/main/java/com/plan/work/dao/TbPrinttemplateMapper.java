@@ -1,11 +1,11 @@
 package com.plan.work.dao;
 
-import com.plan.mybatis.MyBatisWjqDao;
+import com.plan.mybatis.MyBatisPrimaryDao;
 import com.plan.work.entity.TbPrinttemplate;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-@MyBatisWjqDao
+@MyBatisPrimaryDao
 public interface TbPrinttemplateMapper {
     /**
      *  根据主键删除数据库的记录,TB_PRINTTEMPLATE

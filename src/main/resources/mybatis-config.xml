@@ -34,9 +34,9 @@
         <!--<setting name="defaultFetchSize" value="1" />-->
     </settings>
 
-    <!--<typeAliases>-->
-        <!--<typeAlias alias="vo" type="cn.com.pansky.entity.ValueObject"/>-->
-    <!--</typeAliases>-->
+    <typeAliases>
+        <typeAlias alias="vo" type="com.plan.entity.ValueObject"/>
+    </typeAliases>
 
     <plugins>
         <!--<plugin interceptor="cn.com.pansky.mybatis.QueryLimitPlugin">

@@ -66,9 +66,6 @@ public class BeanHelper {
                                 map.put(key + "[" + i + "]", "");
                             }else if (listValue != null && CommonUtil.isPrimitiveOrPrimitiveWrapper(listValue.getClass())) {
                                 map.put(key + "[" + i + "]", listValue.toString());
-                            } else  if(CommonUtil.equalsString(listValue.getClass().getName(),"cn.com.pansky.ach.core.base.AchFileAttached")){
-                                //如果列表中是附件对象，直接退出循环，不转换
-                                break;
                             } else {
                                 Map<String, String> listBeanMap = beanToMap(map.getClass().newInstance(), list.get(i));
                                 Set<String> listBeanMapKeys = listBeanMap.keySet();
@@ -105,7 +102,7 @@ public class BeanHelper {
             if(e instanceof BaseException) {
                 throw (BaseException)e;
             }else{
-                throw new SystemException("Map转换成Bean异常", e,"请联系管理员");
+                throw new SystemException("Bean转换成Map异常", e,"请联系管理员");
             }
         }
     }
